@@ -29,7 +29,7 @@ router.post('/', (req, res) => {
     return res.status(400).send('Mail and name are required')
   }
 
-  members.push(newMember)
+  members.unshift(newMember)
   //res.send(members)
   res.redirect('/')
 })
